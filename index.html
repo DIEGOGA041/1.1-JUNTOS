@@ -2,81 +2,135 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Para mi princesa mariposauria 💖</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #fff0f5, #e0c3fc);
+      font-family: 'Georgia', serif;
+      background: url('https://www.transparenttextures.com/patterns/paper-fibers.png'), #fef9f4;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      color: #444;
+      overflow: hidden;
     }
 
     .carta {
       background: rgba(255, 255, 255, 0.95);
-      border-radius: 25px;
-      padding: 30px;
-      max-width: 750px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 40px;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      position: relative;
+      z-index: 1;
       text-align: center;
     }
 
     h1 {
+      font-size: 28px;
       color: #d63384;
-      font-size: 32px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     h3 {
+      font-size: 16px;
+      color: #999;
       margin-top: 0;
-      font-weight: normal;
-      color: #666;
     }
 
     img {
-      width: 200px;
-      height: 200px;
+      width: 180px;
+      height: 180px;
       object-fit: cover;
       border-radius: 50%;
-      border: 5px solid #ffc0cb;
+      border: 4px solid #f3c6d3;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
       margin: 20px auto;
       display: block;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     }
 
     p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 15px;
+      text-align: justify;
     }
 
     audio {
-      margin-top: 20px;
+      margin-top: 30px;
       width: 100%;
-    }
-
-    .decoracion {
-      font-size: 24px;
-      margin-bottom: 20px;
     }
 
     footer {
       margin-top: 30px;
-      color: #888;
-      font-size: 14px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* Corazones flotantes */
+    .corazon {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      transform: rotate(45deg);
+      animation: flotar 10s linear infinite;
+      opacity: 0.6;
+      z-index: 0;
+    }
+
+    .corazon::before,
+    .corazon::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+
+    .corazon::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .corazon::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes flotar {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- Corazones flotantes -->
+  <div class="corazon" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="corazon" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="corazon" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="corazon" style="left: 70%; animation-delay: 6s;"></div>
+  <div class="corazon" style="left: 90%; animation-delay: 8s;"></div>
+
+  <!-- Carta -->
   <div class="carta">
-    <div class="decoracion">🦋🌸💌🌷</div>
     <h1>Para mi princesa mariposauria</h1>
-    <h3>17-07-25 | De su novio que sigue muy mamado jijij 💪💘</h3>
+    <h3>17-07-25 | De su novio que sigue muy mamado jijij</h3>
 
     <img src="Dany.jpeg" alt="Mi princesa hermosa" />
 
@@ -90,15 +144,15 @@
 
     <p>Espero te guste que te haya hecho tu cartita así y no pienses otra cosa jejej.  
     Tiamo mucho amorcito hermoso. En la tarde vamos con el señor shushei.  
-    Beso beso 😘💕</p>
+    Beso beso</p>
 
     <audio autoplay loop controls>
       <source src="RAMONA - Bonita (Lyric Video) [1JzQzvuAoAE].mp3" type="audio/mpeg" />
-      Tu navegador no soporta audio :(
+      Tu navegador no soporta el audio :(
     </audio>
 
     <footer>
-      Hecho con amor por tu mamado favorito 🫶💓
+      Hecho con amor por tu mamado favorito 🫶
     </footer>
   </div>
 </body>
