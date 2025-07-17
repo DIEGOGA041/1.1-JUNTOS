@@ -3,81 +3,145 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Carta para mi princesa Mariposauria 💖</title>
+  <title>Para mi princesa 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #fceabb, #f8b500);
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: #5b2c6f;
       margin: 0;
-      padding: 20px;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to top, #ffd1dc, #ffeaea);
+      color: #5b2c6f;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      text-align: center;
-      flex-direction: column;
+      overflow: hidden;
+      position: relative;
     }
+
     .card {
-      background: #fff0f5;
-      padding: 25px 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(91, 44, 111, 0.3);
-      max-width: 600px;
+      background: #ffffffcc;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+      z-index: 2;
     }
+
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 0.3em;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.8rem;
+      color: #e91e63;
+      margin-bottom: 0.2em;
     }
+
     h3 {
-      font-weight: normal;
-      margin-top: 0;
-      margin-bottom: 1.5em;
       font-style: italic;
-      color: #b03a5a;
+      color: #ad1457;
+      margin-bottom: 1.5em;
     }
+
     p {
       font-size: 1.1rem;
-      line-height: 1.5;
-      margin-bottom: 1.3em;
+      line-height: 1.6;
+      color: #4a235a;
+      margin-bottom: 1em;
     }
+
     img {
-      max-width: 200px;
+      width: 160px;
       border-radius: 50%;
       margin: 20px auto;
-      box-shadow: 0 0 15px #f8b500aa;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+      display: block;
     }
+
     audio {
-      margin-top: 20px;
+      margin-top: 25px;
       width: 100%;
+      border-radius: 15px;
       outline: none;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #f8b500aa;
+      box-shadow: 0 0 15px #f48fb1;
     }
+
     footer {
       margin-top: 30px;
       font-size: 0.9rem;
       color: #a0486a;
       font-style: italic;
     }
+
+    /* Corazones animados */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      transform: rotate(45deg);
+      animation: float 10s infinite ease-in-out;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: pink;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
   </style>
 </head>
 <body>
+  <!-- corazones flotando -->
+  <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="heart" style="left: 30%; animation-delay: 2s;"></div>
+  <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="heart" style="left: 70%; animation-delay: 1s;"></div>
+  <div class="heart" style="left: 90%; animation-delay: 3s;"></div>
+
   <div class="card">
     <h1>Para mi princesa Mariposauria</h1>
     <h3>Que cada vez se pone más hermosota y culona 💜<br>17-07-25</h3>
-    <img src="Dany.jpeg" alt="Foto de mi princesa" />
-    <p>De su novio que sigue muy mamado jijij</p>
+    <img src="Dany.jpeg" alt="Foto de Dany, mi amor" />
+    <p><strong>De su novio que sigue muy mamado jijij</strong></p>
     <p>
-      Hola mi amorcito hermoso, esta vez será una cartita desde internet jiji, pero quiero que sepas que es con la misma intención de regalarte una física, okei?<br>
-      Ya 1 mes de nuestro primer aniversario, que bonito es compartir siempre mis días contigo, amor, los amooooo. Aunque no hagamos muchas cosas interesantes o bonitas como quisieras, a mi me gusta siempre hacer lo más simple contigo, no importa si solo estamos haciendo nada o si vamos a explorar un panteón jaja, ten por seguro que yo voy a estar feliz de estar contigo.
+      Hola mi amorcito hermoso, esta vez será una cartita desde internet jiji, pero quiero que sepas que es con la misma intención de regalarte una física, okei?
+      Ya 1 mes de nuestro primer aniversario, qué bonito es compartir siempre mis días contigo, amor, los amooooo. Aunque no hagamos muchas cosas interesantes o bonitas como quisieras, a mí me gusta siempre hacer lo más simple contigo, no importa si solo estamos haciendo nada o si vamos a explorar un panteón jaja, ten por seguro que yo voy a estar feliz de estar contigo.
     </p>
     <p>
       Siempre vas a ser la princesa más hermosa, aunque no lo diga todos los días o no te lo diga muy seguido, ese pensamiento siempre va a estar, porque no hay mujer más preciosa, hermosa, perfecta y bonita con la que quiera estar, con la única que quiera comer chuchi siempre, a la que voy a hacer mamá jajaja, y con quien me voy a matar en una moto a 300 km/h jajajaja.
     </p>
     <p>
-      Yo te seguiré amando hasta que te hartes de mí y me dejes abandonado, porque yo creo eso es lo que pasará jaja. Mientras seguiré disfrutando mi tiempo con mi Mariposauria.<br>
-      Espero te guste que te haya hecho tu cartita así y no pienses otra cosa jejej.<br>
+      Yo te seguiré amando hasta que te hartes de mí y me dejes abandonado, porque yo creo que eso es lo que pasará jaja. Mientras, seguiré disfrutando mi tiempo con mi Mariposauria.
+      Espero te guste que te haya hecho tu cartita así y no pienses otra cosa jejej.
       Tiamo mucho amorcito hermoso. En la tarde vamos con el señor shushei. Beso beso 💕
     </p>
 
@@ -85,7 +149,8 @@
       <source src="RAMONA - Bonita (Lyric Video) [1JzQzvuAoAE].mp3" type="audio/mpeg" />
       Tu navegador no soporta audio.
     </audio>
+
+    <footer>Con todo mi amor, tu novio muy mamado 💪</footer>
   </div>
-  <footer>Con todo mi amor, tu novio muy mamado 💪</footer>
 </body>
 </html>
