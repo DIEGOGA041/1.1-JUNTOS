@@ -115,6 +115,44 @@
         opacity: 0;
       }
     }
+
+    .love-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #f06292;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .love-button:hover {
+      background: #ec407a;
+    }
+
+    .modal-bg {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 10;
+    }
+
+    .modal-content {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      margin: 150px auto;
+      font-size: 1.3rem;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      color: #c2185b;
+      font-family: 'Dancing Script', cursive;
+    }
   </style>
 </head>
 <body>
@@ -128,9 +166,8 @@
 
   <div class="card">
     <h1>Para mi princesa Mariposauria</h1>
-    <h3>Que cada vez que abre los ojos, me ilumina la vida 💜<br>17-07-25</h3>
+    <h3>Que cada vez que abre los ojos, ilumina mi vida 💜<br>17-07-25</h3>
     
-    <!-- IMAGEN -->
     <img src="Dany.jpeg" alt="Foto de mi princesa" />
 
     <p><strong>De su novio que sigue muy mamado jijij</strong></p>
@@ -148,13 +185,32 @@
       Tiamo mucho amorcito hermoso. En la tarde vamos con el señor shushei. Beso beso 💕
     </p>
 
-    <!-- AUDIO -->
-    <audio controls>
+    <audio controls autoplay loop>
       <source src="RAMONA - Bonita (Lyric Video) [1JzQzvuAoAE].mp3" type="audio/mpeg" />
       Tu navegador no soporta audio.
     </audio>
 
+    <button class="love-button" onclick="showMessage()">Píkame</button>
+
     <footer>Con todo mi amor, tu novio el mamado 💪</footer>
   </div>
+
+  <!-- Modal -->
+  <div class="modal-bg" id="modal" onclick="hideMessage()">
+    <div class="modal-content">
+      TE AMO CON CADA PARTE DE MI SER, HOY Y SIEMPRE
+    </div>
+  </div>
+
+  <script>
+    function showMessage() {
+      document.getElementById('modal').style.display = 'block';
+    }
+
+    function hideMessage() {
+      document.getElementById('modal').style.display = 'none';
+    }
+  </script>
+
 </body>
 </html>
